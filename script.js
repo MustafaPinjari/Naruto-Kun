@@ -20,3 +20,11 @@
     setInterval(() => {
         changeSlide(1);
     }, 5000);
+
+
+    function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('active');
+        
+    }
+
+    

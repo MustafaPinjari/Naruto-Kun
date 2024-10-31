@@ -8,18 +8,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#characters">Characters</a></li>
-                <li><a href="#episodes">Episodes</a></li>
-                <li><a href="#jutsu">Jutsu</a></li>
-                <li><a href="#villages">Villages</a></li>
-                <li><a href="#merchandise">Merchandise</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Header for desktop view -->
+<header class="header">
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#characters">Characters</a></li>
+            <li><a href="#episodes">Episodes</a></li>
+            <li><a href="#jutsu">Jutsu</a></li>
+            <li><a href="#villages">Villages</a></li>
+            <li><a href="#merchandise">Merchandise</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Sidebar for mobile view -->
+<div class="sidebar" id="sidebar">
+    <button onclick="toggleSidebar()" class="close-btn">&times;</button>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#characters">Characters</a></li>
+            <li><a href="#episodes">Episodes</a></li>
+            <li><a href="#jutsu">Jutsu</a></li>
+            <li><a href="#villages">Villages</a></li>
+            <li><a href="#merchandise">Merchandise</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Toggle button for opening the sidebar on mobile -->
+<button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+
     
     <main>
         <div class="hero">

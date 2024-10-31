@@ -56,6 +56,70 @@
         color: var(--primary-color); /* Change text color on hover */
         border-bottom: 2px solid var(--primary-color); /* Add underline on hover */
     }
+
+/* Default styling for sidebar and toggle button */
+.sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 20px;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.sidebar.active {
+    transform: translateX(0); /* Slide in when active */
+}
+
+.close-btn {
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Toggle button styling */
+.sidebar-toggle {
+    display: none;
+    font-size: 24px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+    color: #333;
+}
+
+
+
+    /* Hero Section */
     .hero {
         display: flex; /* Use flexbox for layout */
         height: 100vh; /* Full height for the hero section */
@@ -93,7 +157,7 @@
         
     }
     .overlay-text:hover {
-        color: var(--primary-color); /* Change text color on hover */
+    color: var(--primary-color); /* Change text color on hover */
     border-bottom: 2px solid var(--primary-color); /* Add underline on hover */
     }
 
@@ -324,23 +388,227 @@ a {
 }
 
 @media screen and (max-width: 700px) {
+
     footer {
         flex-direction: column; /* Stack columns on small screens */
         align-items: center; /* Center align items */
     }
     .col {
         width: 100%; /* Full width for columns */
-        text-align: center; /* Center text */
+        text-align: left; /* Center text */
+    }
+
+}
+
+/* Hide the header on smaller screens */
+@media screen and (max-width: 700px) {
+    .header {
+        display: none;
+    }
+    .sidebar-toggle {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1001;
     }
 }
 
-/* Responsive adjustments */
+/* Sidebar styles */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    padding: 10px 20px;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #575757;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar-toggle {
+    display: none; /* Only display on mobile screens (handled in media query above) */
+}
+
+
+/* Overlay text */
+
 @media screen and (max-width: 700px) {
-    nav ul {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: center; /* Center align items */
+    .overlay-text {
+        position: absolute; /* Position the text absolutely */
+        display: flex;
+         bottom: 30%;/* Shift text upwards */
+        left: 55%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust for the text's own size */
+        font-size: 3em; /* Increase font size */
+        color: white; /* Change color for visibility */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+        font-family: 'f24q220-chestra-chestra-regular-400.', sans-serif; /* Use the custom font */
+        z-index: 0; /* Ensure the text is above the image */
+        width: 100%; /* Full width */
+        /* height: 50%;  */
+        text-align: center; /* Center text */
+        justify-content: center;
+        white-space: nowrap; 
     }
-    nav ul li {
-        margin: 5px 0; /* Adjust margin for vertical spacing */
+
+    /* charachters-title  */
+    .charachters-title {
+        text-align: center; /* Center the title */
+        font-size: 2.5em; /* Adjust font size as needed */
+        color: white; /* Change color for visibility */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+        margin: 20px 0; /* Add margin for spacing */
+        font-family: 'f24q220-chestra-chestra-regular-400.', sans-serif; /* Use the same font as overlay text */
     }
+    .CharactersIframe{
+        left: 50%;
+        width:95vw;
+        border-radius: 20px;
+        padding: 20px;
+        height: 100vh;
+    }
+    /* Arc Slider */
+    .slider-title {
+        text-align: center; /* Center the title */
+        font-size: 2.5em; /* Adjust font size as needed */
+        color: white; /* Change color for visibility */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+        margin: 20px 0; /* Add margin for spacing */
+        font-family: 'f24q220-chestra-chestra-regular-400.', sans-serif; /* Use the same font as overlay text */
+    }
+
+
+
+    /* images in slider */
+    .image-slider {
+        
+        position: relative;
+        max-width: 100%; /* Adjusted for better centering */
+        height: 100vh; /* Fixed height for consistency */
+        left: 55%; /* Center the slider */
+        transform: translateX(-50%); /* Center the slider */
+        overflow: hidden; /* Hide overflow */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+        margin-bottom: 20px; /* Space between slider and footer */
+    }
+    
+    .slider-container {
+        display: flex; /* Use flexbox for layout */
+        transition: transform 0.5s ease-in-out; /* Smooth transition */
+    }
+    
+    .slide {
+        min-width: 100%; /* Each slide takes full width */
+        box-sizing: border-box; /* Include padding in width */
+        position: relative; /* Positioning context for text */
+        opacity: 0; /* Start hidden */
+        transition: opacity 0.5s ease; /* Fade effect */
+    }
+    
+    .slide.active {
+        opacity: 1; /* Show active slide */
+    }
+    
+    .slide img {
+        width: 100%; /* Full width for images */
+        height: 100%; /* Set height to 100% to fill the container */
+        object-fit: cover; /* Ensure images cover the area without distortion */
+        object-position: center; /* Center the image within the container */
+    }
+    
+    .slide-info {
+        position: absolute; /* Position text over image */
+        bottom: 0px; /* Position from bottom */
+        width: 100%;
+        color: white; /* Text color */
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.968)); /* Semi-transparent gradient background */
+        transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        padding: 20px; /* Add some padding for better text visibility */
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.762); /* Optional: add shadow for depth */
+    
+    }
+    
+    button.prev, button.next {
+        position: absolute; /* Position buttons */
+        top: 50%; /* Center vertically */
+        transform: translateY(-50%); /* Adjust for button size */
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        border: none; /* No border */
+        cursor: pointer; /* Pointer cursor */
+        padding: 10px; /* Padding for buttons */
+        border-radius: 50%; /* Rounded buttons */
+        z-index: 10; /* Ensure buttons are above slides */
+        transition: background-color 0.3s ease; /* Smooth transition */
+        font-size: 24px; /* Increase font size for icons */
+    }
+    
+    button.prev:hover, button.next:hover {
+        background-color: rgba(255, 255, 255, 1); /* Change background on hover */
+    }
+    
+    button.prev {
+        left: 20px; /* Position left */
+    }
+    
+    button.next {
+        right: 20px; /* Position right */
+    }
+    
+    .thumbnails {
+        display: flex; /* Use flexbox for thumbnails */
+        justify-content: center; /* Center thumbnails */
+        margin-top: 10px; /* Space above thumbnails */
+        margin-bottom: 50px;
+    }
+    
+    .thumbnails img {
+        width: 100px; /* Thumbnail width */
+        height: 100px; /* Maintain aspect ratio */
+        margin: 0 10px; /* Space between thumbnails */
+        cursor: pointer; /* Pointer cursor */
+        border: 2px solid transparent; /* Default border */
+        transition: border-color 0.3s; /* Smooth border transition */
+    }
+    
+    .thumbnails img:hover {
+        border-color: rgba(255, 153, 0, 0.8); /* Highlight border on hover */
+    }
+    
 }
