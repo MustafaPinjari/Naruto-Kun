@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Tsukuyomi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#episodes">Episodes</a></li>
+                <li><a href="#jutsu">Jutsu</a></li>
+                <li><a href="#villages">Villages</a></li>
+                <li><a href="#merchandise">Merchandise</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="hero">
+            <div class="content">
+                <div class="overlay-text">Infinite Tsukuyomi</div>
+                <img src="Assets/images/Naruto_Flying_PNG-removebg-preview.png" alt="Naruto Sage Mode" class="centered-image">
+            </div>
+        </div>
+
+
+        <div class="charachters">
+            
+        </div>
+
+
+        <h1 class="slider-title">Arcs</h1> <!-- Added H1 for the title -->
+        <div class="image-slider">
+            <div class="slider-container">
+                <div class="slide active">
+                    <img src="Assets/images/prologue-the-land-wave.png" alt="Image 1">
+                    <div class="slide-info">
+                        <h2>Prologue - Land of Waves Arc (Episodes 1–19)</h2>
+                        <p>Naruto, Sasuke, and Sakura team up for their first major mission with Kakashi in the Land of Waves, where they face off against Zabuza and Haku.</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="Assets/images/Chunin_Exams.jpg" alt="Image 2">
+                    <div class="slide-info">
+                        <h2>Chunin Exam Arc (Episodes 20–67)</h2>
+                        <p>Team 7 enters the Chunin Exams, introducing characters like Rock Lee, Gaara, and Neji. This arc includes the Forest of Death and the preliminaries of the Chunin Exams.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="Assets/images/naruto-the-konoha-crush-arc-expl.png" alt="Image 3">
+                    <div class="slide-info">
+                        <h2>Konoha Crush Arc (Episodes 68–80)</h2>
+                        <p>Orochimaru launches an attack on Konoha during the Chunin Exam finals, leading to a climactic battle between him and the Third Hokage, Hiruzen Sarutobi.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="Assets/images/Tsunade Arc.jpg" alt="Image 4">
+                    <div class="slide-info">
+                        <h2>Search for Tsunade Arc (Episodes 81–100)</h2>
+                        <p>Jiraiya and Naruto set off to find Tsunade, the future Fifth Hokage, while Orochimaru tries to recruit her to heal his arms.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="Assets/images/saske-retrival.jpg" alt="Image 5">
+                    <div class="slide-info">
+                        <h2>Sasuke Recovery Mission (Episodes 107–135)</h2>
+                        <p>Sasuke defects to join Orochimaru, and Naruto, along with a team of Genin, sets out to bring him back. Key battles include Naruto vs. Sasuke in the Valley of the End.
+                        </p>
+                    </div>
+                </div>
+                
+
+                <div class="slide">
+                    <img src="Assets/images/Filler-arc.png" alt="Image 6">
+                    <div class="slide-info">
+                        <h2>Filler Arcs (Episodes 136–220)</h2>
+                        <p>After the Sasuke Recovery Mission, the anime includes a variety of filler arcs, including the Land of Tea Escort Mission and the Star Guard Mission.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+            <button class="prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+            <div class="thumbnails">
+                <img src="Assets/images/prologue-the-land-wave.png" alt="Image 1" onclick="goToSlide(0)">
+                <img src="Assets/images/Chunin_Exams.jpg" alt="Image 2" onclick="goToSlide(1)">
+                <img src="Assets/images/naruto-the-konoha-crush-arc-expl.png" alt="Image 3" onclick="goToSlide(2)">
+                <img src="Assets/images/Tsunade Arc.jpg" alt="Image 4" onclick="goToSlide(3)">
+                <img src="Assets/images/saske-retrival.jpg" alt="Image 5" onclick="goToSlide(4)">
+                <img src="Assets/images/Filler-arc.png" alt="Image 6" onclick="goToSlide(5)">
+                
+            </div>
+        </div>
+        
+    </main>
+    
+    <footer id="footer">
+        <div class="col col1">
+            <h3>Infinite Tsukuyomi</h3>
+            <p>Made with <span style="color: #BA6573;">❤</span> by MustafaPinjari</p>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/mustafa-pinjari-287625256/" target="_blank" class="link">
+                    <img src="./Assets/images/Socials/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/MustafaPinjari" target="_blank" class="link">
+                    <img src="./Assets/images/Socials/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/its_ur_musuuu" target="_blank" class="link">
+                    <img src="./Assets/images/Socials/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://codepen.io/-MUSTAFA-" target="_blank" class="link">
+                    <img src="./Assets/images/Socials/codepen.png" alt="Codepen">
+                </a>
+                <a href="https://stackoverflow.com/users/26745237/mustafapinjari" target="_blank" class="link">
+                    <img src="./Assets/images/Socials/stackoverflow.png" alt="Stack Overflow">
+                </a>
+                <a href="https://leetcode.com/u/Mustafa_Pinjari/" target="_blank" class="link">
+                    <img src="./Assets/images/Socials/leetcode.png" alt="LeetCode">
+                </a>
+            </div>
+            <p style="color: #818181; font-size: smaller">2024 © All Rights Reserved</p>
+        </div>
+        <div class="col col2">
+            <p><strong>About</strong></p>
+            <p>Our Mission</p>
+            <p>Privacy Policy</p>
+            <p>Terms of Service</p>
+        </div>
+        <div class="col col3">
+            <p><strong>Services</strong></p>
+            <p>Products</p>
+            <p>Join Our Team</p>
+            <p>Partner with Us</p>
+        </div>
+        <div class="backdrop"></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

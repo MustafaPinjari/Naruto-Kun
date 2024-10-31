@@ -1,0 +1,329 @@
+    :root {
+        --primary-color: #ff9900; /* Naruto's orange */
+        --secondary-color: #000000; /* Black */
+        --accent-color: #0000ff; /* Blue */
+        --active-color: hsl(204 100 53);
+        --bg-color: #e1e3e5;
+        --icon-default: hsl(203 5 75);
+        --icon-accent: hsl(203 15 98);
+        --navigation-color: hsl(203 5 25 / 0.3);
+    }
+
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: var(--secondary-color); /* Light background */
+        color: var(--secondary-color); /* Dark text */
+    }
+
+    header {
+        padding: 10px; /* Reduced padding for a smaller header */
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto; /* Center the header */
+        margin-right: auto; /* Center the header */
+    }
+
+    nav {
+        display: flex; /* Use flexbox for the navbar */
+        justify-content: center; /* Center the navbar items */
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    }
+
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0; /* Remove default margin */
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        text-decoration: none; /* Remove default underline */
+        color: white; /* Change to white for visibility */
+        font-family: 'f24q220-chestra-chestra-regular-400.', sans-serif; /* Use the same font as overlay text */
+        padding: 10px 15px; /* Padding for buttons */
+        border-radius: 50px; /* Rounded corners for buttons */
+        font-size: 1.5em; /* Increase font size (adjust as needed) */
+        transition: color 0.3s ease; /* Smooth transition for color */
+    }
+    
+    nav ul li a:hover {
+        color: var(--primary-color); /* Change text color on hover */
+        border-bottom: 2px solid var(--primary-color); /* Add underline on hover */
+    }
+    .hero {
+        display: flex; /* Use flexbox for layout */
+        height: 100vh; /* Full height for the hero section */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        position: relative; /* Positioning context for absolute elements */
+        background-color: var(--secondary-color); /* Optional: Set a background color */
+    }
+
+    .content {
+        text-align: center; /* Center text */
+        position: relative; /* Ensure the content section is a positioning context */
+        display: flex; /* Use flexbox for layout */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        flex-direction: column; /* Stack text and image */
+    }
+
+    .overlay-text {
+        position: absolute; /* Position the text absolutely */
+        display: flex;
+        top: 2%; /* Shift text upwards */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust for the text's own size */
+        font-size: 8em; /* Increase font size */
+        color: white; /* Change color for visibility */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+        font-family: 'f24q220-chestra-chestra-regular-400.', sans-serif; /* Use the custom font */
+        z-index: 0; /* Ensure the text is above the image */
+        width: 100%; /* Full width */
+        /* height: 50%;  */
+        text-align: center; /* Center text */
+        justify-content: center;
+        white-space: nowrap; 
+        
+    }
+    .overlay-text:hover {
+        color: var(--primary-color); /* Change text color on hover */
+    border-bottom: 2px solid var(--primary-color); /* Add underline on hover */
+    }
+
+    .centered-image {
+        max-width: 100%; /* Adjust width to fit better */
+        height: auto; /* Maintain aspect ratio */
+        z-index: 1; /* Ensure the image is below the text */
+    }
+    
+/* Slider */
+/* ... existing code ... */
+.slider-title {
+    text-align: center; /* Center the title */
+    font-size: 5em; /* Adjust font size as needed */
+    color: white; /* Change color for visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+    margin: 20px 0; /* Add margin for spacing */
+    font-family: 'f24q220-chestra-chestra-regular-400.', sans-serif; /* Use the same font as overlay text */
+
+}
+.image-slider {
+    position: relative;
+    max-width: 50%; /* Adjusted for better centering */
+    height: 100vh; /* Fixed height for consistency */
+    left: 50%; /* Center the slider */
+    transform: translateX(-50%); /* Center the slider */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    margin-bottom: 80px; /* Space between slider and footer */
+}
+
+.slider-container {
+    display: flex; /* Use flexbox for layout */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes full width */
+    box-sizing: border-box; /* Include padding in width */
+    position: relative; /* Positioning context for text */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease; /* Fade effect */
+}
+
+.slide.active {
+    opacity: 1; /* Show active slide */
+}
+
+.slide img {
+    width: 100%; /* Full width for images */
+    height: 100%; /* Set height to 100% to fill the container */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    object-position: center; /* Center the image within the container */
+}
+
+.slide-info {
+    position: absolute; /* Position text over image */
+    bottom: 0px; /* Position from bottom */
+    width: 100%;
+    color: white; /* Text color */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.968)); /* Semi-transparent gradient background */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    padding: 20px; /* Add some padding for better text visibility */
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.762); /* Optional: add shadow for depth */
+
+}
+
+button.prev, button.next {
+    position: absolute; /* Position buttons */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for button size */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    padding: 10px; /* Padding for buttons */
+    border-radius: 50%; /* Rounded buttons */
+    z-index: 10; /* Ensure buttons are above slides */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    font-size: 24px; /* Increase font size for icons */
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(255, 255, 255, 1); /* Change background on hover */
+}
+
+button.prev {
+    left: 20px; /* Position left */
+}
+
+button.next {
+    right: 20px; /* Position right */
+}
+
+.thumbnails {
+    display: flex; /* Use flexbox for thumbnails */
+    justify-content: center; /* Center thumbnails */
+    margin-top: 10px; /* Space above thumbnails */
+    margin-bottom: 50px;
+}
+
+.thumbnails img {
+    width: 100px; /* Thumbnail width */
+    height: 100px; /* Maintain aspect ratio */
+    margin: 0 10px; /* Space between thumbnails */
+    cursor: pointer; /* Pointer cursor */
+    border: 2px solid transparent; /* Default border */
+    transition: border-color 0.3s; /* Smooth border transition */
+}
+
+.thumbnails img:hover {
+    border-color: rgba(255, 153, 0, 0.8); /* Highlight border on hover */
+}
+
+    @font-face {
+        font-family: 'f24q220-chestra-chestra-regular-400.'; /* Replace with your desired font name */
+        src: url('fonts/chestra/otf/f24q220-chestra-chestra-regular-400.otf') format('opentype'); /* Adjust the path and format */
+        /* You can add additional formats if you have them, e.g., TTF */
+    }
+    
+/* Footer */
+
+/* Footer Styling */
+footer {
+    z-index: 500;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* padding: 20px; Adjust padding for better spacing */
+    background-color: var(--secondary-color); /* Dark background */
+    color: var(--accent-color); /* Text color */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow: hidden; /* Prevent overflow */
+    margin-top: 80px; /* Optional: Add margin to the footer for additional spacing */
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0) 5%,
+        rgba(0, 0, 0, 0.3) 20%,
+        rgba(0, 0, 0, 0.6) 30%,
+        rgba(0, 0, 0, 0.8) 40%,
+        rgba(0, 0, 0, 1) 50%,
+        rgb(0, 0, 0)
+    );
+    z-index: -7;
+}
+
+.backdrop {
+    z-index: -5;
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    mask-image: linear-gradient(
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.5) 10%,
+        rgba(0, 0, 0, 0.8) 20%,
+        rgba(0, 0, 0, 1) 30%,
+        rgb(0, 0, 0)
+    );
+}
+
+.col {
+    flex: 1; /* Allow columns to grow equally */
+    padding: 20px; /* Add padding for spacing */
+    min-width: 150px; /* Set a minimum width for columns */
+    max-width: 300px; /* Set a maximum width for columns */
+}
+
+.col h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem; /* Adjust font size */
+}
+
+.col p {
+    margin-bottom: 0.5rem; /* Adjust margin for better spacing */
+    color: #818181; /* Lighter color for less emphasis */
+    line-height: 1.5; /* Improve readability */
+}
+
+.social {
+    display: flex;
+    gap: 1rem; /* Space between social icons */
+    margin-bottom: 1.5rem; /* Space below social icons */
+}
+
+.link img {
+    width: 30px; /* Set a fixed size for icons */
+    height: 30px; /* Set a fixed size for icons */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link {
+    width: 40px; /* Set a fixed size for icons */
+    height: 40px; /* Set a fixed size for icons */
+    background-color: rgba(255, 255, 255, 0.1); /* Background for icons */
+    border-radius: 50%; /* Make icons circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+    footer {
+        flex-direction: column; /* Stack columns on small screens */
+        align-items: center; /* Center align items */
+    }
+    .col {
+        width: 100%; /* Full width for columns */
+        text-align: center; /* Center text */
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 700px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+    nav ul li {
+        margin: 5px 0; /* Adjust margin for vertical spacing */
+    }
+}
