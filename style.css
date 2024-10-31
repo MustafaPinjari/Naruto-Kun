@@ -214,6 +214,23 @@ button.next {
         /* You can add additional formats if you have them, e.g., TTF */
     }
     
+
+/* Character Slider */
+.charachters-title {
+    text-align: center; /* Center the title */
+    font-size: 5em; /* Adjust font size as needed */
+    color: white; /* Change color for visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+    margin: 20px 0; /* Add margin for spacing */
+    font-family: 'f24q220-chestra-chestra-regular-400.', sans-serif; /* Use the same font as overlay text */
+}
+.CharactersIframe{
+    left: 50%;
+    width:95vw;
+    border-radius: 20px;
+    padding: 20px;
+    height: 100vh;
+}
 /* Footer */
 
 /* Footer Styling */
