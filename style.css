@@ -38,6 +38,7 @@
     animation: rotate 5s linear infinite; /* Rotate indefinitely */
 }
 
+
 /* Navbar styling */
 nav {
     display: flex;
@@ -213,6 +214,7 @@ nav ul li a:hover {
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
     margin-bottom: 80px; /* Space between slider and footer */
+    padding: 70px;
 }
 
 .slider-container {
@@ -315,9 +317,25 @@ button.next {
 }
 .CharactersIframe{
     left: 50%;
-    width:95vw;
+    width:98.5vw;
     border-radius: 20px;
-    padding: 20px;
+    /* padding: 0px; */
+    height: 100vh;
+}
+
+.villans-title {
+    text-align: center; /* Center the title */
+    font-size: 5em; /* Adjust font size as needed */
+    color: white; /* Change color for visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+    margin: 20px 0; /* Add margin for spacing */
+    font-family: 'f24q220-chestra-chestra-regular-400.', sans-serif; /* Use the same font as overlay text */
+}
+.villansIframe{
+    left: 50%;
+    width:98.5vw;
+    border-radius: 20px;
+    /* padding: 20px; */
     height: 100vh;
 }
 /* Footer */
@@ -498,6 +516,7 @@ a {
 .Footer-Img{
     height: 20%;
     width: 20%;
+    padding-right: 20px;
 }
 /* Overlay text */
 
@@ -530,6 +549,21 @@ a {
         font-family: 'f24q220-chestra-chestra-regular-400.', sans-serif; /* Use the same font as overlay text */
     }
     .CharactersIframe{
+        left: 50%;
+        width:95vw;
+        border-radius: 20px;
+        padding: 20px;
+        height: 100vh;
+    }
+    .villans-title{
+        text-align: center; /* Center the title */
+        font-size: 2.5em; /* Adjust font size as needed */
+        color: white; /* Change color for visibility */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better visibility */
+        margin: 20px 0; /* Add margin for spacing */
+        font-family: 'f24q220-chestra-chestra-regular-400.', sans-serif; /* Use the same font as overlay text */
+    }
+    .VillansIframe{
         left: 50%;
         width:95vw;
         border-radius: 20px;
@@ -628,7 +662,7 @@ a {
         display: flex; /* Use flexbox for thumbnails */
         justify-content: center; /* Center thumbnails */
         margin-top: 10px; /* Space above thumbnails */
-        margin-bottom: 50px;
+        margin-bottom: 5px;
     }
     
     .thumbnails img {
